@@ -53,9 +53,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-preexec () {
-  echo -ne "\ek${1%% *}\e\\"
-}
+# preexec () {
+#   echo -ne "\ek${1%% *}\e\\"
+# }
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,3 +83,5 @@ preexec () {
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias relay="ssh lingguang01@relay01.baidu.com"
 export EDITOR=vim
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

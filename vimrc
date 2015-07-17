@@ -145,10 +145,11 @@ set background=dark
 colorscheme solarized
 
 " Set guifont to Monaco 14 pound
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+set termencoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -198,6 +199,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" map C-o to C-j cause C-o is tmux leader
+map <C-i> <C-o>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
