@@ -25,10 +25,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'terryma/vim-expand-region'
-Plugin 'wincent/command-t'
+"Plugin 'wincent/command-t'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'mileszs/ack.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -351,3 +352,24 @@ let g:tmuxline_separators = {
     \ 'right' : '',
     \ 'right_alt' : '<',
     \ 'space' : ' '}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tlist
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <leader>t :TlistToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pastetoggle
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set pastetoggle=<F2>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Cursor related settings
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set cursorcolumn cursorline
+set colorcolumn=81
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => map jk to <ESC>
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap jk <ESC>
