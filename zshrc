@@ -85,3 +85,8 @@ alias relay="ssh lingguang01@relay01.baidu.com"
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+alias sshcuri="ssh zachary@183.62.156.108"
+
+
+. /Users/lingguang01/torch/install/bin/torch-activate
