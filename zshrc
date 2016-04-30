@@ -45,7 +45,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux python vim)
+plugins=(git tmux python vim vi-mode)
 
 # User configuration
 
@@ -88,5 +88,25 @@ export LANG=en_US.UTF-8
 
 alias sshcuri="ssh zachary@183.62.156.108"
 
+#bindkey -v
+#
+#bindkey '^P' up-history
+#bindkey '^N' down-history
+#bindkey '^?' backward-delete-char
+#bindkey '^h' backward-delete-char
+#bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+bindkey -M vicmd '?' history-incremental-search-backward
 
-. /Users/lingguang01/torch/install/bin/torch-activate
+#function zle-line-init zle-keymap-select {
+#VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+#RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
+#zle reset-prompt
+#}
+#
+#zle -N zle-line-init
+#zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+
+. /Users/lingguang01/code/torch/install/bin/torch-activate

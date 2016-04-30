@@ -30,6 +30,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'tomtom/tcomment_vim'
+"Plugin 'tpope/vim-commentary'
+Plugin 'christoomey/vim-system-copy'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -95,7 +98,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -126,6 +129,10 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+
+" set relative line number
+set relativenumber
+set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -176,14 +183,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f', '')<CR>
-vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -358,6 +357,15 @@ let g:tmuxline_separators = {
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>t :TlistToggle<cr>
 
+""""""""""""""""""""""""""""""
+" => YouCompleteMe
+""""""""""""""""""""""""""""""
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf= 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_key_invoke_completion = '<leader>c'
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pastetoggle
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -373,3 +381,4 @@ set colorcolumn=81
 " => map jk to <ESC>
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap jk <ESC>
+
