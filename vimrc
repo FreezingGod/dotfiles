@@ -26,7 +26,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'terryma/vim-expand-region'
 "Plugin 'wincent/command-t'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'mileszs/ack.vim'
@@ -150,6 +150,9 @@ endif
 
 " Set colorscheme to solarized dark
 set background=dark
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" set t_Co=256
 colorscheme solarized
 
 " Set guifont to Monaco 14 pound
@@ -327,7 +330,7 @@ map <leader>o :BufExplorer<cr>
 """"""""""""""""""""""""""""""
 " => YankRing
 """"""""""""""""""""""""""""""
-let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
+let g:yankring_history_dir = '~/.vim/temp_dirs/'
 nnoremap <silent> <leader>r :YRShow<CR>
 
 
