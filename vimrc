@@ -31,8 +31,9 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tomtom/tcomment_vim'
-"Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'michaeljsmith/vim-indent-object'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
